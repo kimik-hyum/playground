@@ -3,13 +3,11 @@ import * as React from "react";
 
 type TodoInputProps = Omit<HeadlessInputProps, "ref"> & Props;
 
-type Props = {
-  after?: React.ReactNode;
-};
+type Props = {};
 
 const TodoInput = React.forwardRef<HTMLInputElement, TodoInputProps>(
-  ({ after, ...props }, ref) => {
-    return <Input ref={ref} {...props} />;
+  ({ ...props }, ref) => {
+    return <Input ref={ref} {...props} className="todo-input" />;
   }
 );
 

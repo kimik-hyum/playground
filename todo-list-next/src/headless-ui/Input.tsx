@@ -2,14 +2,12 @@ import React from "react";
 
 type InputProps = React.HTMLProps<HTMLInputElement>;
 
-export interface HeadlessInputProps extends InputProps {
-  before?: React.ReactNode;
-}
+export interface HeadlessInputProps extends InputProps {}
 
 const Input = React.forwardRef<HTMLInputElement, HeadlessInputProps>(
-  ({ before, ...props }, ref) => {
+  ({ ...props }, ref) => {
     return (
-      <div className="ui-input">
+      <div className={`ui-input ${props.className}`}>
         <input ref={ref} {...props} />
       </div>
     );
