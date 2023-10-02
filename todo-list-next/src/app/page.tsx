@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default async function Hydation() {
   const queryClient = getQueryClient();
-  await queryClient.prefetchQuery(["hydrate-users"], getTodo);
+  await queryClient.prefetchQuery(["todo-list"], getTodo);
   const dehydratedState = dehydrate(queryClient);
   return (
     <Hydrate state={dehydratedState}>

@@ -9,7 +9,7 @@ export async function getTodo() {
 
 export const useTodo = () => {
   return useQuery({
-    queryKey: ["hydrate-users"],
+    queryKey: ["todo-list"],
     queryFn: () => getTodo(),
   });
 };
