@@ -7,8 +7,7 @@ import React from "react";
 
 export default function TodoList() {
   const { data } = useTodo();
+  const list = data?.data;
 
-  console.log(data);
-
-  return <main>{}</main>;
+  return <main></main>;
 }
